@@ -91,3 +91,10 @@ BOARD_KERNEL_CMDLINE := androidboot.carrier=wifi-only product_type=w
 # Use the open-source board-info file if none was set by the vendor
 # config.
 TARGET_BOARD_INFO_FILE ?= device/moto/wingray/board-info.txt
+
+BOARD_MALLOC_ALIGNMENT := 16
+TARGET_EXTRA_CFLAGS := $(call cc-option,-mtune=cortex-a9) $(call cc-option,-mcpu=cortex-a9)
+
+#define to use all of the Linaro Cortex-A9 optimized string funcs,
+#instead of subset known to work on all machines
+USE_ALL_OPTIMIZED_STRING_FUNCS := true

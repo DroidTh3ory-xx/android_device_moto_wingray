@@ -38,5 +38,10 @@ $(call inherit-product, device/moto/wingray/device.mk)
 # Discard inherited values and use our own instead.
 PRODUCT_NAME := full_wingray
 PRODUCT_DEVICE := wingray
-PRODUCT_BRAND := Android
-PRODUCT_MODEL := Full Android on Wingray
+PRODUCT_BRAND := motorola
+PRODUCT_MODEL := Xoom
+PRODUCT_MANUFACTURER := Motorola
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    PRODUCT_NAME=tervigon \
+    BUILD_FINGERPRINT="motorola/tervigon/wingray:4.0.4/IMM76/292727:user/release-keys" \
+    PRIVATE_BUILD_DESC="tervigon-user 4.0.4 IMM76 292727 release-keys"

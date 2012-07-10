@@ -15,10 +15,4 @@
 -->
 
 <resources>
-    <!-- No powercontrol widget for tablets -->
-    <bool name="has_powercontrol_widget">false</bool>
-    <!-- Allow user management feature -->
-    <bool name="enable_user_management">true</bool>
-    <!-- Show dock settings when docked -->
-    <bool name="has_dock_settings">true</bool>
 </resources>

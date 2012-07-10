@@ -19,3 +19,5 @@ $(call inherit-product, vendor/eos/common.mk)
 $(call inherit-product, vendor/eos/tablets/common.mk)
 
 # Add commands which are wingray specific after here
+$(call inherit-product-if-exists, vendor/eos/common.mk)
+$(call inherit-product-if-exists, vendor/eos/tablets/common.mk)

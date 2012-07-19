@@ -20,7 +20,8 @@ endif
 
 subdir_makefiles:= \
 	$(LOCAL_PATH)/libaudio/Android.mk \
-	$(LOCAL_PATH)/taudio/Android.mk
+	$(LOCAL_PATH)/taudio/Android.mk \
+    $(LOCAL_PATH)/DeviceSettings/Android.mk \
 
 include $(subdir_makefiles)
 

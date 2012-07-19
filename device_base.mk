@@ -87,7 +87,8 @@ PRODUCT_PACKAGES := \
     hcitool \
     bttest \
     com.android.future.usb.accessory \
-    whisperd
+    whisperd \
+    DeviceSettings \
 
 PRODUCT_CHARACTERISTICS := tablet
 

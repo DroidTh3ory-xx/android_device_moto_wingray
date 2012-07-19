@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:title="@string/misc_settings">
+        <CheckBoxPreference
+            android:key="charge_light"
+            android:persistent="false"
+            android:title="@string/charge_light"/>
+    </PreferenceCategory>
+</PreferenceScreen>

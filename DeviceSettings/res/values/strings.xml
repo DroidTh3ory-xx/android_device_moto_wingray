@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Motorola Xoom Settings</string>
+    <string name="misc_settings">Miscellaneous Settings</string>
+    <string name="charge_light">Enable the charging led.</string>
+</resources>

@@ -43,5 +43,5 @@ PRODUCT_MODEL := Xoom
 PRODUCT_MANUFACTURER := Motorola
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME=tervigon \
-    BUILD_FINGERPRINT="motorola/tervigon/wingray:4.0.4/IMM76/292727:user/release-keys" \
-    PRIVATE_BUILD_DESC="tervigon-user 4.0.4 IMM76 292727 release-keys"
+    BUILD_FINGERPRINT="motorola/tervigon/wingray:4.1.1/JRO03H/405518:user/release-keys" \
+    PRIVATE_BUILD_DESC="tervigon-user 4.1.1 JRO03H 405518 release-keys"

@@ -115,7 +115,6 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_COPY_FILES += \
     device/moto/wingray/init.d/01chargingLight:system/etc/init.d/01chargingLight
-$(call inherit-product-if-exists, device/moto/wingray/modules/modules.mk)
 
 # inherit from the non-open-source side, if present
 ifneq ($(filter trygon trygon_l10n calgon full_stingray tyranid stingray,$(TARGET_PRODUCT)),)

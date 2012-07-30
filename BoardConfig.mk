@@ -98,3 +98,6 @@ TARGET_EXTRA_CFLAGS := $(call cc-option,-mtune=cortex-a9) $(call cc-option,-mcpu
 #define to use all of the Linaro Cortex-A9 optimized string funcs,
 #instead of subset known to work on all machines
 USE_ALL_OPTIMIZED_STRING_FUNCS := true
+
+TARGET_KERNEL_SOURCE := kernel/moto/wingray
+TARGET_KERNEL_CONFIG := stingray_defconfig

@@ -93,7 +93,13 @@ BOARD_KERNEL_CMDLINE := androidboot.carrier=wifi-only product_type=w
 TARGET_BOARD_INFO_FILE ?= device/moto/wingray/board-info.txt
 
 BOARD_MALLOC_ALIGNMENT := 16
-TARGET_EXTRA_CFLAGS := $(call cc-option,-mtune=cortex-a9) $(call cc-option,-mcpu=cortex-a9)
+TARGET_EXTRA_CFLAGS := $(call cc-option,-mtune=cortex-a9)
+TARGET_EXTRA_CFLAGS += $(call cc-option,-mcpu=cortex-a9)
+TARGET_EXTRA_CFLAGS += $(call cc-option,-march=armv7-a)
+TARGET_EXTRA_CFLAGS += $(call cc-option,-O3)
+TARGET_EXTRA_CFLAGS += $(call cc-option,--fast-math)
+TARGET_EXTRA_CFLAGS += $(call cc-option,--param l2-cache-size=1024)
+TARGET_EXTRA_CFLAGS += $(call cc-option,--param l1-cache-size=32)
 
 #define to use all of the Linaro Cortex-A9 optimized string funcs,
 #instead of subset known to work on all machines

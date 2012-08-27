@@ -97,7 +97,6 @@ TARGET_EXTRA_CFLAGS := $(call cc-option,-mtune=cortex-a9)
 TARGET_EXTRA_CFLAGS += $(call cc-option,-mcpu=cortex-a9)
 TARGET_EXTRA_CFLAGS += $(call cc-option,-march=armv7-a)
 TARGET_EXTRA_CFLAGS += $(call cc-option,-O3)
-TARGET_EXTRA_CFLAGS += $(call cc-option,--fast-math)
 TARGET_EXTRA_CFLAGS += $(call cc-option,--param l2-cache-size=1024)
 TARGET_EXTRA_CFLAGS += $(call cc-option,--param l1-cache-size=32)
 

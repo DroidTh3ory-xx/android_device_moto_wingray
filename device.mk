@@ -15,9 +15,7 @@
 #
 
 $(call inherit-product, device/moto/wingray/device_base.mk)
-$(call inherit-product, vendor/eos/common.mk)
-$(call inherit-product, vendor/eos/tablets/common.mk)
 
 # Add commands which are wingray specific after here
-$(call inherit-product-if-exists, vendor/eos/common.mk)
-$(call inherit-product-if-exists, vendor/eos/tablets/common.mk)
+BOOTANIMATION_RESOLUTION := 1280x720_small
+$(call inherit-product, vendor/eos/common.mk)

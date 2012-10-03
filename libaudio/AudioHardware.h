@@ -40,12 +40,12 @@ namespace android_audio_legacy {
 #include <linux/tegra_audio.h>
 
 #define AUDIO_HW_OUT_SAMPLERATE 44100
-#define AUDIO_HW_NUM_OUT_BUF 12 // kernel updated to this value
+#define AUDIO_HW_NUM_OUT_BUF 6
 #define AUDIO_HW_OUT_LATENCY_MS 0
 
 // FIXME: this is a workaround for issue 3387419 with impact on latency
 // to be removed when root cause is fixed
-#define AUDIO_HW_NUM_OUT_BUF_LONG 12 // kernel updated to this value
+#define AUDIO_HW_NUM_OUT_BUF_LONG 12
 
 #define AUDIO_HW_IN_SAMPLERATE 11025                  // Default audio input sample rate
 #define AUDIO_HW_IN_CHANNELS (AudioSystem::CHANNEL_IN_MONO) // Default audio input channel mask

@@ -40,17 +40,19 @@ namespace android_audio_legacy {
 #include <linux/tegra_audio.h>
 
 #define AUDIO_HW_OUT_SAMPLERATE 44100
-#define AUDIO_HW_NUM_OUT_BUF 2
+#define AUDIO_HW_NUM_OUT_BUF 12 // kernel updated to this value
 #define AUDIO_HW_OUT_LATENCY_MS 0
 
 // FIXME: this is a workaround for issue 3387419 with impact on latency
 // to be removed when root cause is fixed
-#define AUDIO_HW_NUM_OUT_BUF_LONG 4
+#define AUDIO_HW_NUM_OUT_BUF_LONG 12 // kernel updated to this value
 
 #define AUDIO_HW_IN_SAMPLERATE 11025                  // Default audio input sample rate
 #define AUDIO_HW_IN_CHANNELS (AudioSystem::CHANNEL_IN_MONO) // Default audio input channel mask
 #define AUDIO_HW_IN_BUFFERSIZE (4096)               // Default audio input buffer size
 #define AUDIO_HW_IN_FORMAT (AudioSystem::PCM_16_BIT)  // Default audio input sample format
+
+#define AUDIO_HW_OUT_BUFFERSIZE (16384)
 
 enum {
     AUDIO_HW_GAIN_SPKR_GAIN = 0,
@@ -211,7 +213,7 @@ private:
                                 uint32_t *pRate);
         virtual uint32_t    sampleRate() const { return AUDIO_HW_OUT_SAMPLERATE; }
         // must be 32-bit aligned - driver only seems to like 4800
-        virtual size_t      bufferSize() const { return 4096; }
+        virtual size_t      bufferSize() const { return AUDIO_HW_OUT_BUFFERSIZE; }
         virtual uint32_t    channels() const { return AudioSystem::CHANNEL_OUT_STEREO; }
         virtual int         format() const { return AudioSystem::PCM_16_BIT; }
         virtual uint32_t    latency() const { return (1000*AUDIO_HW_NUM_OUT_BUF_LONG*(bufferSize()/frameSize()))/sampleRate()+AUDIO_HW_OUT_LATENCY_MS; }

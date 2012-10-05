@@ -52,7 +52,7 @@ namespace android_audio_legacy {
 #define AUDIO_HW_IN_BUFFERSIZE (4096)               // Default audio input buffer size
 #define AUDIO_HW_IN_FORMAT (AudioSystem::PCM_16_BIT)  // Default audio input sample format
 
-#define AUDIO_HW_OUT_BUFFERSIZE (16384)
+#define AUDIO_HW_OUT_BUFFERSIZE (4096)
 
 enum {
     AUDIO_HW_GAIN_SPKR_GAIN = 0,

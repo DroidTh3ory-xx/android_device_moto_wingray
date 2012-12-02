@@ -188,6 +188,10 @@
 
     <!-- This device does not allow sms service. -->
     <bool name="config_sms_capable">false</bool>
+    
+    <!--  Bring multiuser in for wingray -->
+    <!--  Maximum number of supported users -->
+    <integer name="config_multiuserMaximumUsers">8</integer>
 
     <!-- Enable puk unlockscreen -->
     <bool name="config_enable_puk_unlock_screen">true</bool>

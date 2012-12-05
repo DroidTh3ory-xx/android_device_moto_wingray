@@ -213,6 +213,9 @@
          causing scroll startup to jump. -->
     <dimen name="config_viewConfigurationTouchSlop">12dp</dimen>
 
+    <!-- Separate software navigation bar required on this device. -->
+    <bool name="config_showNavigationBar">true</bool>
+
     <!-- Array of OEM specific USB mode override config.
          OEM can override a certain USB mode depending on ro.bootmode.
          Specify an array of below items to set override rule.

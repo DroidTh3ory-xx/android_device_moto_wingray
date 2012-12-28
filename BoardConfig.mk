@@ -110,3 +110,7 @@ USE_ALL_OPTIMIZED_STRING_FUNCS := true
 
 TARGET_KERNEL_SOURCE := kernel/moto/wingray
 TARGET_KERNEL_CONFIG := stingray_defconfig
+
+# adb has root
+ADDITIONAL_DEFAULT_PROPERTIES += ro.secure=0
+ADDITIONAL_DEFAULT_PROPERTIES += ro.allow.mock.location=1

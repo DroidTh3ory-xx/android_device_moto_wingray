@@ -19,6 +19,4 @@
     <bool name="has_powercontrol_widget">false</bool>
     <!-- Show dock settings when docked -->
     <bool name="has_dock_settings">true</bool>
-    <!-- Boolean indicating whether the device has proprietary settings -->
-    <bool name="config_hasDeviceSettings">true</bool>
 </resources>

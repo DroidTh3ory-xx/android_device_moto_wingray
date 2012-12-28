@@ -14,6 +14,9 @@
 # limitations under the License.
 #
 
+PRODUCT_AAPT_CONFIG := normal large mdpi tvdpi
+PRODUCT_AAPT_PREF_CONFIG := mdpi
+
 DEVICE_PACKAGE_OVERLAYS := \
     device/moto/wingray/overlay
 
@@ -87,8 +90,16 @@ PRODUCT_PACKAGES := \
     hcitool \
     bttest \
     com.android.future.usb.accessory \
-    whisperd \
-    DeviceSettings \
+    whisperd
+
+PRODUCT_PACKAGES += \
+    fstrim \
+    ntfs-3g.probe \
+    ntfsfix \
+    ntfs-3g \
+    thtt
+
+PRODUCT_PACKAGES += LatinIME
 
 PRODUCT_CHARACTERISTICS := tablet
 
@@ -113,9 +124,6 @@ PRODUCT_COPY_FILES += \
     system/extras/bugmailer/bugmailer.sh:system/bin/bugmailer.sh \
     system/extras/bugmailer/send_bug:system/bin/send_bug
 
-PRODUCT_COPY_FILES += \
-    device/moto/wingray/init.d/01chargingLight:system/etc/init.d/01chargingLight
-
 # inherit from the non-open-source side, if present
 ifneq ($(filter trygon trygon_l10n calgon full_stingray tyranid stingray,$(TARGET_PRODUCT)),)
 $(call inherit-product-if-exists, vendor/moto/stingray/stingray-vendor.mk)
@@ -126,3 +134,6 @@ endif
 WIFI_BAND := 802_11_ABG
 $(call inherit-product-if-exists, hardware/broadcom/wlan/bcmdhd/firmware/bcm4329/device-bcm.mk)
 
+# Call in the murdrer
+$(call inherit-product-if-exists, vendor/nos/killrom/config/common.mk)
+$(call inherit-product-if-exists, vendor/google/killrom/config/mini.mk)

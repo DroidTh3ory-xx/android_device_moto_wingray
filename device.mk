@@ -16,6 +16,5 @@
 
 $(call inherit-product, device/moto/wingray/device_base.mk)
 
-# Add commands which are wingray specific after here
-BOOTANIMATION_RESOLUTION := 1280x720_small
-$(call inherit-product, vendor/eos/common.mk)
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.killrom.version=KILLRWingray

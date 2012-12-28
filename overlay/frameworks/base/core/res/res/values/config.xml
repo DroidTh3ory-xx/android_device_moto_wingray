@@ -20,6 +20,13 @@
 <!-- These resources are around just to allow their values to be customized
      for different hardware and product builds. -->
 <resources>
+	
+    <!-- This device is not "voice capable"; it's data-only. -->
+    <bool name="config_voice_capable">false</bool>
+
+    <!-- Enable puk unlockscreen -->
+    <bool name="config_enable_puk_unlock_screen">true</bool>
+
     <!-- Software blur is too slow on this device. -->
     <bool name="config_sf_slowBlur">true</bool>
 
@@ -232,7 +239,8 @@
         <item>"factorycable:ptp:usbnet"</item>
         <item>"factorycable:ptp,adb:usbnet,adb"</item>
     </string-array>
-            <!-- Enable Google Network Location Services -->
+
+    <!-- Enable Google Network Location Services -->
     <string-array name="config_locationProviderPackageNames" translatable="false">
     <!-- The standard AOSP fused location provider -->
     <item>com.android.location.fused</item>

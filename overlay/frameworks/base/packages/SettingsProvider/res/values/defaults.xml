@@ -17,6 +17,8 @@
  */
 -->
 <resources>
+	<!-- We don't have a notification LED -->
+    <bool name="def_notification_pulse">false</bool>
     <!-- 2 minutes for default screen timeout -->
     <integer name="def_screen_off_timeout">120000</integer>
     <!-- Set the automatic brightness mode on by default -->

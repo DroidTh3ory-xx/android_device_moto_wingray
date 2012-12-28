@@ -20,9 +20,9 @@
 <!-- These resources are around just to allow their values to be customized
      for different hardware and product builds. -->
 <resources>
-    <!-- Component to be used as the system bar service.  Must implement the IStatusBar
+    <!-- Component to be used as the status bar service.  Must implement the IStatusBar
      interface.  This name is in the ComponentName flattened format (package/class)  -->
-    <string name="config_systemBarComponent" translatable="false">com.android.systemui.statusbar.tablet.TabletStatusBar</string>
+    <string name="config_statusBarComponent" translatable="false">com.android.systemui.statusbar.phone.PhoneStatusBar</string>
 
     <!-- Enable quick settings on tablets -->
     <bool name="config_hasSettingsPanel">true</bool>
